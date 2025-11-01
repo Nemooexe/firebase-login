@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Firebase SDK -->
+  <script type="module">
+    // Import Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut }
+      from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+    // Your Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyBXKPh2hLiBnQNDCa-i2fdEd-8nuxs5Jj4",
+  authDomain: "login-93b90.firebaseapp.com",
+  projectId: "login-93b90",
+  storageBucket: "login-93b90.firebasestorage.app",
+  messagingSenderId: "84483058579",
+  appId: "1:84483058579:web:4baaababada236951fd666",
+  measurementId: "G-N63XDGCZ9G"
+};
+
+    // Initialize Firebase
+   const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+    // Make auth available globally
+    window.auth = auth;
+    window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+    window.signInWithEmailAndPassword = signInWithEmailAndPassword;
+    window.signOut = signOut;
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Firebase Login</h1>
+
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+
+    <button id="signupBtn">Sign Up</button>
+    <button id="loginBtn">Login</button>
+    <button id="logoutBtn">Logout</button>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

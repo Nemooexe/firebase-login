@@ -1,0 +1,63 @@
+num=371
+n=0
+temp=num
+
+for i in range (0,100):
+ while temp>0:
+    temp=temp//10
+    n=n+1
+ temp=num
+ sum=0
+ while temp>0:
+    digit=temp%10
+    sum=sum+digit**n
+    temp=temp//10
+ if num==sum:
+    print("armstrong")
+else:
+    print("not an armstrong")
+
+
+string="haya"
+v=0
+c=0
+string=string.lower()
+for i in string:
+    if i=='a' or i=='e' or i=='i' or i=='o' or i=='u':
+        v=v+1
+    else:
+        c=c+1
+print(v)
+print(c)
+
+string="Haya"
+
+vowels=['a','e','i','o','u']
+result=""
+for i in range(len(string)):
+    if string[i] not in vowels:
+        result=result+string[i]
+print(result)
+
+string="afeefa"
+rev=string[::-1]
+if string==rev:
+    print("palindrome")
+else:
+    print("not a palindrome")
+
+string1="britto1Anand!one#"
+
+string2=" "
+for i in string1:
+    if (ord(i)>=65 and ord(i)<=90) or (ord(i)>=97 and ord(i)<=122):
+        string2+=i
+print(string2)
+
+string1="r10t g4m35"
+
+string2=" "
+for i in string1:
+    if (ord(i)>=65 and ord(i)<=90) or (ord(i)>=97 and ord(i)<=122):
+        string2+=i
+print(string2)
